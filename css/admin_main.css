@@ -1,0 +1,487 @@
+/* start varaibles */
+:root {
+    --main-color: #000000c2;
+    --seconde-color: #05a2fb;
+}
+
+/* end varaibles */
+/* start globale rules */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+}
+
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-title {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: normal;
+    padding: 30px;
+}
+
+/* end globale rules */
+/* start header */
+header {
+    background-color: #000000c2;
+    padding: 10px;
+    max-height: 74px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .img img {
+    width: 50px;
+}
+
+header .img span {
+    color: white;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+header .container .links ul {
+    display: flex;
+    align-items: center;
+}
+
+header .container .links ul li:last-child a {
+
+    background-color: var(--seconde-color);
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+header .container .links ul li {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+header .container .links ul li a {
+    color: white;
+    cursor: pointer;
+}
+header .container .links ul li:not(:last-child):hover a {
+    color: var(--seconde-color);
+}
+
+/* end header */
+/* start info */
+.big {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+
+.info-log {
+    display: none;
+    z-index: 4;
+    position: relative;
+    top: 2px;
+    right: -115px;
+    width: 300px;
+    box-shadow: 6px 6px 17px #e3e3e3;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #e3e3e3;
+    padding: 40px;
+
+}
+
+.active-log {
+    display: block;
+}
+
+.info-log div {
+    margin-bottom: 20px;
+}
+
+.info-log .img {
+    text-align: center;
+    background-color: var(--seconde-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.info-log .name {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info-log .email {
+    opacity: 0.50;
+}
+
+.info-log button {
+    background-color: var(--seconde-color);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
+    border: 1px solid var(--seconde-color);
+}
+
+.info-log button:hover {
+    background-color: transparent;
+    color: var(--seconde-color);
+    cursor: pointer;
+}
+
+.info-log button a {
+    color: white;
+}
+
+.info-log button:hover a {
+    color: var(--seconde-color);
+}
+
+/* end info */
+/* start modal */
+.modaal {
+    position: relative;
+    padding-bottom: 146px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    display: none;
+    opacity: 0;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+.NOactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modaalnone {
+    left: 0% !important;
+    top: 20% !important;
+    transform: translateX(0%) !important;
+}
+
+.modaalcontent {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 500px;
+    max-width: 90%;
+    padding: 1em 2em;
+    border-radius: 4px;
+}
+
+.modaalcontent h1 {
+    color: #05a2fb;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.modaalcontent div input,
+.modaalcontent div select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.modaalcontent div.save input {
+    color: white;
+    background-color: #05a2fb;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    /* text-transform: capitalize; */
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: 1px solid #05a2fb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.modaalcontent div.save {
+    text-align: center;
+}
+
+.modaalcontent div.save input:hover {
+    background-color: transparent;
+    color: #05a2fb;
+}
+
+.modaal-footer a {
+    position: absolute;
+    top: 0px;
+    right: 22px;
+    border: none;
+    background: transparent;
+    width: fit-content !important;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modaal-footer input:hover {
+    background-color: #eee;
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50%;
+}
+/* start schedule */
+.hiddden {
+    display: none;
+}
+.table {
+    margin-bottom: 60px;
+}
+
+table {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+table thead tr th,
+table tbody tr td {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+table thead tr th {
+    background-color: #000000c2;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+table tbody tr td {
+    margin-top: 10px;
+}
+
+table tbody tr td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+table tbody tr td:last-child div {
+    margin-right: 5px;
+    background-color: #05a2fb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table tbody tr td:last-child div:first-of-type {
+    background-color: #05a2fb;
+}
+
+table tbody tr td:last-child div:last-of-type {
+    background-color: red;
+}
+
+table tbody tr td div a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+/* end schedule */
+/* start modal */
+.modal {
+    display: none;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalnone {
+    left: 0% !important;
+    top: 20% !important;
+    transform: translateX(0%) !important;
+}
+.relativeClass {
+    position: absolute !important;
+}
+.modalcontent {
+    position: relative;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 500px;
+    max-width: 90%;
+    padding: 1em 2em;
+    border-radius: 4px;
+}
+
+.modalcontent h1 {
+    color: #05a2fb;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.modalcontent div input,
+.modalcontent div select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.modalcontent div.save input {
+    color: white;
+    background-color: #05a2fb;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: 1px solid #05a2fb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.modalcontent div.save {
+    text-align: center;
+}
+
+.modalcontent div.save input:hover {
+    background-color: transparent;
+    color: #05a2fb;
+}
+
+.modal-footer a {
+    position: absolute;
+    top: 5px;
+    right: 22px;
+    border: none;
+    background: transparent;
+    width: fit-content !important;
+    font-size: 30px;
+    cursor: pointer;
+}
+/* end modal */
+.create .container .tp,
+.create .container .cour,
+.create .container .reunion {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+
+.create .container .tp input,
+.create .container .cour input,
+.create .container .reunion input {
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 2px;
+}
+
+.create .container .tp input:hover,
+.create .container .cour input:hover,
+.create .container .reunion input:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    cursor: pointer;
+}
+/* for new class */
+.modaall {
+    position: relative;
+    padding-bottom: 146px;
+    min-height: 600px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    display: none;
+    opacity: 0;
+}
+.modaall .modal-footer a {
+    position: absolute;
+    top: 0px;
+    right: 22px;
+    border: none;
+    background: transparent;
+    width: fit-content !important;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.activeClass {
+    display: block;
+    opacity: 1;
+}

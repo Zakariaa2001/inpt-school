@@ -1,0 +1,210 @@
+/* start varaibles  */
+:root {
+  --main-color: white;
+  --seconde-color: #05a2fb;
+  --section-padding: 60px;
+}
+/* end varaibles  */
+html {
+  scroll-behavior: smooth;
+}
+
+/* start globle  rule  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* start title */
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+/* end title */
+/* end globle  rule  */
+/* start header */
+.header {
+  margin-bottom: 60px;
+  background-color: #000000;
+  background-image: url("../images/téléchargement.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(00 00 00 / 35%);
+}
+.container header {
+  display: flex;
+  justify-content: space-between;
+}
+.container header div {
+  margin-top: 10px;
+  position: relative;
+}
+.container header .links ul {
+  display: flex;
+}
+.container header .links ul li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+header a {
+  text-decoration: none;
+}
+header .img img {
+  width: 50px;
+}
+header .img span {
+  color: var(--main-color);
+  font-size: 40px;
+  text-transform: capitalize;
+}
+header .links li a {
+  color: var(--main-color);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+header .links li a:hover {
+  color: var(--seconde-color);
+}
+.header .container .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header .container .text h1 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+.header .container .text .links {
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .container .text .links a {
+  text-transform: capitalize;
+  color: var(--main-color);
+  background-color: var(--seconde-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 20px;
+}
+.header .container .text .links a:hover {
+  color: var(--seconde-color);
+  background-color: var(--main-color);
+}
+/* end header */
+/* start about */
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.about .about-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.about .about-content .box {
+  width: 400px;
+  text-align: center;
+}
+.about .about-content .box h2 {
+  color: var(--seconde-color);
+  text-transform: capitalize;
+  font-weight: normal;
+}
+.about .about-content .box p {
+  color: #777;
+  line-height: 1.6;
+}
+/* end about */
+/* start contact */
+.Contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.Contact .Contact-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Contact .Contact-content div h2 {
+  color: var(--seconde-color);
+  text-transform: capitalize;
+  font-weight: normal;
+}
+.Contact .Contact-content div a {
+  display: block;
+  margin-bottom: 10px;
+}
+.Contact .Contact-content div a {
+  text-decoration: none;
+  color: #777;
+}
+.Contact .Contact-content div a:hover {
+  color: var(--seconde-color);
+}
+.Contact .Contact-content div.links a::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f105";
+  color: var(--seconde-color);
+  margin-right: 5px;
+}
+
+.Contact .Contact-content div.Contact-info a:first-of-type::before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\f39e";
+  color: var(--seconde-color);
+  margin-right: 10px;
+}
+.Contact .Contact-content div.Contact-info a:nth-of-type(2)::before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\f099";
+  color: var(--seconde-color);
+  margin-right: 5px;
+}
+.Contact .Contact-content div.Contact-info a:nth-of-type(3)::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f095";
+  color: var(--seconde-color);
+  margin-right: 5px;
+}
+.Contact .Contact-content div.Contact-info a:last-of-type::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0e0";
+  color: var(--seconde-color);
+  margin-right: 5px;
+}
+
+/* end contact */
